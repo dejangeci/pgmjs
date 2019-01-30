@@ -1,0 +1,53 @@
+{
+  "name": "pgm",
+  "version": "1.0.0",
+  "description": "Simple migration tool for PostgreSQL",
+  "license": "ISC",
+  "repository": "github:dejangeci/pgmjs",
+  "author": "Dejan Geci",
+  "main": "lib/pgm.js",
+  "bin": {
+    "pgm": "./bin/pgm.js"
+  },
+  "scripts": {
+    "lint": "eslint lib/**/*.js tests/**/*.js bin/**/*.js",
+    "test": "jest --coverage --coverageReporters=text",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage --coverageReporters=lcov"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "dotenv": "^6.2.0",
+    "fs-extra": "^7.0.1",
+    "md5": "^2.2.1",
+    "pg": "^7.7.1",
+    "slug": "^0.9.3"
+  },
+  "devDependencies": {
+    "eslint": "5.11.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "prettier": "1.14.3",
+    "jest": "^23.6.0"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "engines": {
+    "node": ">= 8.2"
+  },
+  "keywords": [
+    "postgre",
+    "postgresql",
+    "pg",
+    "migrate",
+    "migration",
+    "migrations",
+    "migrator",
+    "sql",
+    "database",
+    "db"
+  ]
+}

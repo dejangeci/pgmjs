@@ -1,0 +1,13 @@
+{
+  "env": { "node": true },
+  "parserOptions": { "ecmaVersion": 2018 },
+  "extends": ["plugin:prettier/recommended"],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ]
+  }
+}
