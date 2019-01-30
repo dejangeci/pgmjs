@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  db:
+    image: postgres:11.1-alpine
+    environment:
+      - POSTGRES_DB=pgmtest
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer:4.7.0-standalone
+    depends_on:
+      - db
+    ports:
+      - 8080:8080
