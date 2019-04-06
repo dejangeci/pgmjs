@@ -14,7 +14,7 @@
     "test": "jest --coverage --coverageReporters=text",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage --coverageReporters=lcov",
-    "upgrade": "ncu --upgrade && npm install"
+    "upgrade": "ncu --upgrade && npm install && npm audit fix"
   },
   "dependencies": {
     "chalk": "^2.4.2",
