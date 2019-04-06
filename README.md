@@ -2,16 +2,16 @@
 
 [![ISC License](https://img.shields.io/npm/l/pgm.svg?style=flat)](https://opensource.org/licenses/ISC) [![NPM Version](http://img.shields.io/npm/v/pgm.svg?style=flat)](https://www.npmjs.org/package/pgm) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier) [![Blazing Fast](https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg?style=flat)](https://twitter.com/acdlite/status/974390255393505280)
 
-Simple migration tool for PostgreSQL
+Simple CLI migration tool for PostgreSQL
 
 ## Installation
 
 ```shell
-npm install pgm             # local, usage: npx pgm [params]
+npm i pgm             # local, usage: npx pgm [params]
 # or
-npm install pgm --save-dev  # devDependencies, usage: npx pgm [params]
+npm i pgm --save-dev  # devDependencies, usage: npx pgm [params]
 # or
-npm install pgm --global    # global, usage: pgm [params]
+npm i pgm --global    # global, usage: pgm [params]
 ```
 
 ## Requirements
@@ -61,14 +61,14 @@ Options:
 Commands:
   make|create [name...]  create a migration with optional name
   stat|status            print current migration status
-  up|migrate [seq]       apply all, or up to [seq] pending migrations
+  up|migrate [seq]       apply all, or up to specified migration sequence
 
 Examples:
   $ pgm make
   $ pgm make create users table
   $ pgm stat
-  $ pgm up
-  $ pgm up 5
+  $ pgm up 5    # apply up to, and including 005.sql
+  $ pgm up      # apply all pending
 ```
 
 ## Configuration
@@ -76,7 +76,7 @@ Examples:
 If no CLI options are specified, pgm will try to load `pgm.json` if it exists. Otherwise `.env` will be loaded using [dotenv](https://www.npmjs.com/package/dotenv).
 To explicitly load a configuration, use `--config custom.json` or `--dotenv .custom.env`.
 
-Settings are then read from json configuration or `process.env` depending on the options.
+Settings are then read from json configuration or `process.env`, depending on the set options.
 
 Schema and table can be specified using `"migrationsTable": "custom_schema.custom_table"`.
 

@@ -3,19 +3,20 @@
 1. [Fork it](https://help.github.com/articles/fork-a-repo/)
 2. Install dependencies (`npm install`)
 3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Added some feature'`)
-5. Test your changes (`npm test`)
+4. Commit your changes - follow [commitizen](https://github.com/commitizen/cz-cli) convention (`git commit -am 'feat(cli): added some feature'`)
+5. Lint and test your changes (`npm run lint && npm test`)
 6. Push to the branch (`git push origin my-new-feature`)
 7. [Create new Pull Request](https://help.github.com/articles/creating-a-pull-request/)
 
 ## Recommended tools
 
-- [Visual Studio Code 1.30.2+](https://code.visualstudio.com/)
+- [Visual Studio Code 1.33.0+](https://code.visualstudio.com/)
 - VSCode Extensions:
   - Prettier - Code Formatter
   - ESLint
   - EditorConfig for VS Code
   - Coverage Gutters
+  - Visual Studio Code Commitizen Support
 
 ## Testing
 
