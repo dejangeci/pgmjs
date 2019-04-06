@@ -2,7 +2,7 @@
 
 [![ISC License](https://img.shields.io/npm/l/pgm.svg?style=flat)](https://opensource.org/licenses/ISC) [![NPM Version](http://img.shields.io/npm/v/pgm.svg?style=flat)](https://www.npmjs.org/package/pgm) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier) [![Blazing Fast](https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg?style=flat)](https://twitter.com/acdlite/status/974390255393505280)
 
-Simple CLI migration tool for PostgreSQL
+Simple command-line migration tool for PostgreSQL
 
 ## Installation
 
@@ -47,7 +47,7 @@ Pending: 002-another-one.sql
 ```
 Usage: pgm [options] [command]
 
-Simple migration tool for PostgreSQL
+Simple command-line migration tool for PostgreSQL
 
 Options:
   -V, --version          output the version number
