@@ -2,7 +2,7 @@ version: "2"
 
 services:
   db:
-    image: postgres:11.1-alpine
+    image: postgres:11.2-alpine
     environment:
       - POSTGRES_DB=pgmtest
       - POSTGRES_USER=admin
@@ -11,7 +11,7 @@ services:
       - 5432:5432
 
   adminer:
-    image: adminer:4.7.0-standalone
+    image: adminer:4.7.1-standalone
     depends_on:
       - db
     ports:

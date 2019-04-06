@@ -15,10 +15,10 @@
 3. Execute PGM commands
 
    ```shell
-   npx pgm up 1 # migrate to 001-create-users-table.sql
-   npx pgm up 3 # migrate to 003-create-role-table.sql
-   npx pgm up # apply all pending migrations
-   npx pgm stat # check migration status
+   npx pgm up 1   # migrate to 001-create-users-table.sql
+   npx pgm up 3   # migrate to 003-create-role-table.sql
+   npx pgm stat   # check migration status
+   npx pgm up     # apply all pending migrations
    ```
 
 4. Inspect database
