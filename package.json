@@ -13,7 +13,8 @@
     "lint": "eslint lib/**/*.js tests/**/*.js bin/**/*.js",
     "test": "jest --coverage --coverageReporters=text",
     "test:watch": "jest --watch",
-    "test:cov": "jest --coverage --coverageReporters=lcov"
+    "test:cov": "jest --coverage --coverageReporters=lcov",
+    "upgrade": "ncu --upgrade && npm install"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -28,8 +29,9 @@
     "eslint": "5.11.0",
     "eslint-config-prettier": "3.3.0",
     "eslint-plugin-prettier": "3.0.0",
-    "prettier": "1.14.3",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "npm-check-updates": "^3.1.4",
+    "prettier": "1.14.3"
   },
   "files": [
     "bin/",
