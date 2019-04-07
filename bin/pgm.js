@@ -187,8 +187,8 @@ program.on("--help", function() {
   log("  $ pgm make");
   log("  $ pgm make create users table");
   log("  $ pgm stat");
-  log("  $ pgm up");
-  log("  $ pgm up 5");
+  log("  $ pgm up 5    # apply up to, and including 005.sql");
+  log("  $ pgm up      # apply all pending");
 });
 
 program.on("command:*", function() {
