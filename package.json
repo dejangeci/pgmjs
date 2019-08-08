@@ -20,18 +20,18 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "dotenv": "^8.0.0",
-    "fs-extra": "^8.0.1",
+    "fs-extra": "^8.1.0",
     "md5": "^2.2.1",
-    "pg": "^7.11.0",
+    "pg": "^7.12.0",
     "slug": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-prettier": "4.3.0",
+    "eslint": "6.1.0",
+    "eslint-config-prettier": "6.0.0",
     "eslint-plugin-prettier": "3.1.0",
     "jest": "^24.8.0",
-    "npm-check-updates": "^3.1.10",
-    "prettier": "1.17.1"
+    "npm-check-updates": "^3.1.20",
+    "prettier": "1.18.2"
   },
   "files": [
     "bin/",
