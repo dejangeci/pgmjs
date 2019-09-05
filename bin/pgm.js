@@ -27,13 +27,13 @@ async function resolveConfiguration(options) {
 
   const defaultConfigFile = path.resolve("pgm.json");
   const defaultConfigFileExists = await util.fileExists(defaultConfigFile);
-  const shouldLoadConfig = !!options.parent.config;
-  const configFileSpecified = typeof options.parent.config !== "boolean";
+  const shouldLoadConfig = options.parent.config !== false;
+  const configFileSpecified = typeof options.parent.config === "string";
 
   const defaultDotenvFile = path.resolve(".env");
   const defaultDotenvFileExists = await util.fileExists(defaultDotenvFile);
-  const shouldLoadDotenv = !!options.parent.dotenv;
-  const configDotenvSpecified = typeof options.parent.dotenv !== "boolean";
+  const shouldLoadDotenv = options.parent.dotenv !== false;
+  const configDotenvSpecified = typeof options.parent.dotenv === "string";
 
   if (shouldLoadConfig && configFileSpecified) {
     const configContents = await util.getFileContents(path.resolve(options.parent.config));
