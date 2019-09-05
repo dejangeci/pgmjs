@@ -21,6 +21,16 @@
    npx pgm up     # apply all pending migrations
    ```
 
+   Configuration usage examples:
+
+   ```shell
+   npx pgm --no-config stat               # don't use pgm.json (uses .env by default)
+   npx pgm --no-dotenv stat               # don't use .env (uses pgm.json by default)
+   npx pgm --no-config --no-dotenv stat   # don't use pgm.json or .env (uses environment variables by default)
+   npx pgm --config pgm-alt.json stat     # use pgm-alt.json configuration
+   npx pgm --dotenv .env.alt stat         # use .env.alt configuration
+   ```
+
 4. Inspect database
 
    http://localhost:8080/?pgsql=db
