@@ -1,6 +1,6 @@
 {
   "name": "pgm",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Simple command-line migration tool for PostgreSQL",
   "license": "ISC",
   "repository": "github:dejangeci/pgmjs",
