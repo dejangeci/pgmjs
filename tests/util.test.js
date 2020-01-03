@@ -15,9 +15,16 @@ describe("cleanFilename()", () => {
 });
 
 describe("calculateNextInSequence()", () => {
-  test.each([[[], 1], [[1], 2], [[5], 6], [[1, 2], 3], [[1, 3], 4], [[10, 15], 16], [[20, 10], 21]])(
-    "should return correct sequence for %p",
-    (input, expected) => expect(util.calculateNextInSequence(input)).toEqual(expected)
+  test.each([
+    [[], 1],
+    [[1], 2],
+    [[5], 6],
+    [[1, 2], 3],
+    [[1, 3], 4],
+    [[10, 15], 16],
+    [[20, 10], 21]
+  ])("should return correct sequence for %p", (input, expected) =>
+    expect(util.calculateNextInSequence(input)).toEqual(expected)
   );
 });
 
@@ -51,8 +58,21 @@ describe("isPositiveInteger()", () => {
 });
 
 describe("getDuplicateElements()", () => {
-  test.each([[[1, 2, 3], []], [[1, 2, 2, 3], [2, 2]], [[1, 2, 3, 2], [2, 2]], [[3, 2, 1, 2, 3], [3, 2, 2, 3]]])(
-    "should return duplicate array elements for %p",
-    (input, expected) => expect(util.getDuplicateElements(input)).toEqual(expected)
+  test.each([
+    [[1, 2, 3], []],
+    [
+      [1, 2, 2, 3],
+      [2, 2]
+    ],
+    [
+      [1, 2, 3, 2],
+      [2, 2]
+    ],
+    [
+      [3, 2, 1, 2, 3],
+      [3, 2, 2, 3]
+    ]
+  ])("should return duplicate array elements for %p", (input, expected) =>
+    expect(util.getDuplicateElements(input)).toEqual(expected)
   );
 });
