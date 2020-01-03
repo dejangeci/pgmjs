@@ -61,7 +61,7 @@ Options:
 Commands:
   make|create [name...]  create a migration with optional name
   stat|status            print current migration status
-  up|migrate [seq]       apply all, or up to specified migration sequence
+  up|migrate [seq]       apply all, or up to [seq] pending migrations
 
 Examples:
   $ pgm make
