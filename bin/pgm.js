@@ -92,7 +92,7 @@ program
   .command("stat")
   .alias("status")
   .description("print current migration status")
-  .action(async options => {
+  .action(async (options) => {
     let client;
     try {
       const config = await resolveConfiguration(options);
@@ -109,8 +109,8 @@ program
       log(chalk.green(`Applied migrations: ${appliedMigrations.length}`));
       log(chalk.yellow(`Pending migrations: ${pendingMigrations.length}`));
       if (appliedMigrations.length || pendingMigrations.length) log();
-      appliedMigrations.forEach(m => log(chalk.green("Applied: ") + m.filename));
-      pendingMigrations.forEach(m => log(chalk.yellow("Pending: ") + m.filename));
+      appliedMigrations.forEach((m) => log(chalk.green("Applied: ") + m.filename));
+      pendingMigrations.forEach((m) => log(chalk.yellow("Pending: ") + m.filename));
     } catch (err) {
       handleError(err.message);
     } finally {
@@ -141,7 +141,7 @@ program
 
       const pendingMigrations = migration.getPendingMigrations(appliedMigrations, localMigrations);
 
-      if (seqSpecified && !pendingMigrations.filter(x => x.seq === seq).length)
+      if (seqSpecified && !pendingMigrations.filter((x) => x.seq === seq).length)
         throw new Error("Specified migration is not pending");
 
       if (pendingMigrations.length === 0) {
@@ -177,11 +177,11 @@ program
 
 // Handlers
 
-program.on("option:quiet", function() {
+program.on("option:quiet", function () {
   log = () => {};
 });
 
-program.on("--help", function() {
+program.on("--help", function () {
   log("");
   log("Examples:");
   log("  $ pgm make");
@@ -191,7 +191,7 @@ program.on("--help", function() {
   log("  $ pgm up      # apply all pending");
 });
 
-program.on("command:*", function() {
+program.on("command:*", function () {
   handleError(`Invalid command: ${program.args.join(" ")}\nSee --help for a list of available commands`);
 });
 
